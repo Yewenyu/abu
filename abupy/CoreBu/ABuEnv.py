@@ -146,7 +146,7 @@ def str_is_cn(a_str):
     return is_cn_path
 
 
-root_drive = path.expanduser('~')
+root_drive = os.getcwd()
 # root_drive = os.path.join(root_drive, u'测试')
 # noinspection PyTypeChecker
 

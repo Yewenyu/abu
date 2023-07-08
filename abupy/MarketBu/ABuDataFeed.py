@@ -118,6 +118,8 @@ class BDApi(StockBaseMarket, SupportMixin):
             days = ABuDateUtil.diff(start, ABuDateUtil.current_str_date(), check_order=False)
             # 每次返回300条数据
             n_folds = int(days / 300.0)
+            if n_folds == 0:
+                n_folds = 1
 
         for _ in xrange(0, n_folds):
             if next_start:
